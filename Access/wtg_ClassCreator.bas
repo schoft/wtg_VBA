@@ -2,6 +2,7 @@ Attribute VB_Name = "wtg_ClassCreator"
 Option Compare Database
 Option Explicit
 
+
 '-------------------------------------------------------------------------------
 ' Method  : wtg_RemoveAccents
 ' Author  : Witigo
@@ -176,7 +177,6 @@ Dim strClase As String
     ' -------------------------------------------------------------------------
     '   Completamos la Clase
     ' -------------------------------------------------------------------------
-
     strClase = strDecl & strProp & strFunc
 
     'copy from immediate window and paste into class module
@@ -190,6 +190,7 @@ Dim strClase As String
     Set dbs = Nothing
 
 End Function
+
 
 '-------------------------------------------------------------------------------
 ' Method  : wtg_GetFieldType
@@ -256,6 +257,7 @@ Dim strFieldType As String
 
 End Function
 
+
 '-------------------------------------------------------------------------------
 ' Method  : wtg_GetPrefixType
 ' Author  : Witigo
@@ -321,6 +323,7 @@ Dim strLCN As String
     wtg_GetPrefixType = strLCN
 
 End Function
+
 
 '-------------------------------------------------------------------------------
 ' Method  : wtg_CreateCLS
