@@ -2,6 +2,7 @@ Attribute VB_Name = "wtg_Dates"
 Option Compare Database
 Option Explicit
 
+
 '-------------------------------------------------------------------------------
 ' Method  : wtg_IsSunday
 ' Author  : Witigo
