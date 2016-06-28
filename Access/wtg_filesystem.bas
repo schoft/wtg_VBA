@@ -2,6 +2,7 @@ Attribute VB_Name = "wtg_Filesystem"
 Option Compare Database
 Option Explicit
 
+
 '-------------------------------------------------------------------------------
 ' ¡Atención!
 '
@@ -15,11 +16,10 @@ Option Explicit
 '-------------------------------------------------------------------------------
 
 
-
 '-------------------------------------------------------------------------------
 ' Method  : wtg_SelectFolder
 ' Author  : Witigo
-' Date    : 1/3/2014
+' Date    : 01/06/2016
 ' Version : 1.0
 ' Purpose : Muestra una ventana FileDialog de Microsoft Office, que devuelve la
 '           ruta completa del directorio seleccionado.
@@ -67,7 +67,7 @@ End Function
 '-------------------------------------------------------------------------------
 ' Method  : wtg_SaveFileAs
 ' Author  : Witigo
-' Date    : 1/3/2016
+' Date    : 01/06/2016
 ' Version : 1.0
 ' Purpose : Muestra una ventana FileDialog de Microsoft Office, de tipo SaveAs
 '           que devuelve la ruta completa del fichero que queremos guardar.
@@ -109,10 +109,11 @@ Dim strFullFilePath As String
 
 End Function
 
+
 '-------------------------------------------------------------------------------
 ' Method  : wtg_SelectFile
 ' Author  : Witigo
-' Date    : 1/3/2014
+' Date    : 01/06/2016
 ' Version : 1.0
 ' Purpose : Muestra una ventana FileDialog de Microsoft Office, que devuelve la
 '           ruta completa del fichero seleccionado.
@@ -172,5 +173,29 @@ Dim strFilePath as string
 
     ' Borramos el objeto
     Set fDialog = Nothing
+
+End Function
+
+
+'-------------------------------------------------------------------------------
+' Method  : wtg_FolderExist
+' Author  : Witigo
+' Date    : 01/06/2016
+' Version : 1.0
+' Purpose : Comprueba la existencia de un directorio.
+'
+' @Param    string    strFolderPath
+' @return   boolean   bolFolderPath
+'-------------------------------------------------------------------------------
+Public Function wtg_FolderExist(strFolderPath As String) As Boolean
+
+Dim bolFolderPath As Boolean
+
+    bolFolderPath = False
+
+    ' Comprobamos la existencia del directorio.
+    If Dir(strFolderPath, vbDirectory) <> "" Then bolFolderPath = True
+
+    wtg_FolderExist = bolFolderPath
 
 End Function

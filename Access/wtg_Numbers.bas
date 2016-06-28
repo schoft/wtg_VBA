@@ -2,10 +2,11 @@ Attribute VB_Name = "wtg_Numbers"
 Option Compare Database
 Option Explicit
 
+
 '-------------------------------------------------------------------------------
 ' Method  : wtg_RandomNumber
 ' Author  : Witigo
-' Date    : 4/2/2014
+' Date    : 01/06/2016
 ' Version : 1.0
 ' Purpose : Genera un número aleatorio comprendido entre dos números dados.
 '
