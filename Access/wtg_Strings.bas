@@ -23,8 +23,9 @@ Public Function wtg_CutString( _
 
 End Function
 
+
 '-------------------------------------------------------------------------------
-' Method  : wtg_RemoveAccents
+' Method  : wtg_StripAccent
 ' Author  : Witigo
 ' Date    : 01/06/2016
 ' Version : 1.0
