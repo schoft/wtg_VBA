@@ -166,7 +166,7 @@ End Function
 '
 ' @Param    integer   KeyAscii
 '-------------------------------------------------------------------------------
-Sub OnlyNumbers(KeyAscii As Integer)
+Sub wtg_OnlyNumbers(KeyAscii As Integer)
 
     ' Para saber el código equivalente a la tecla pulsada, podemos utilizar el
     ' método debug.print para ver el código en la ventana de inmediato del IDE.

@@ -35,3 +35,31 @@ Dim strDatabaseType As String
                            True
 
 End Function
+
+
+' TODO Terminar este modulo
+Public Function wtg_ExportReportPDF( _
+                    strReportName As String, _
+                    strCriteria As String
+                    )
+
+Dim strDate As String
+Dim strOutputFile As String
+
+    ' Formateamos la fecha
+    strDate = Format(Date, "ddmmyy")
+    ' Buscamos el valor en la tabla
+    strOutputFile = wtg_SelectFile
+    strOutputFile = DLookup("[Dir_Reports]", "db_o_Settings", "[ID]=1")
+    strOutputFile = strOutputFile & "\" & strDate & "_Campaña" & ".pdf"
+
+    ' Abrimos el informe
+    DoCmd.OpenReport strReprotName, acViewPreview, , strCriteria
+
+    ' Establecemos el formato de salida como PDF
+    DoCmd.OutputTo acOutputReport, strReportName, acFormatPDF, strOutputFile, False
+
+    ' Cerramos el Informe
+    DoCmd.Close acReport, strReprotName, acSaveNo
+
+End Function

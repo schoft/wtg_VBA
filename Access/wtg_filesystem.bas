@@ -1,8 +1,6 @@
 Attribute VB_Name = "wtg_Filesystem"
 Option Compare Database
 Option Explicit
-
-
 '-------------------------------------------------------------------------------
 ' ¡Atención!
 '

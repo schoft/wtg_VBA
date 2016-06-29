@@ -48,7 +48,7 @@ Dim bolRunTime As Boolean
 
 End Function
 
-
+' TODO Terminar esta función
 '-------------------------------------------------------------------------------
 ' Procedure : StatusBar
 ' Author    : Witigo (Angel Campos Muñoz)
@@ -75,22 +75,6 @@ Dim Temp As Variant
         SysCmd(acSysCmdClearStatus)
 
     End If
-
-End Function
-
-
-' TODO: Arreglar esta función
-Public Function ExportaTabla(tabla As String) As Boolean
-
-Dim tblName As String
-Dim dbDestination As String
-Dim dbType As String
-
-tblName = tabla
-dbDestination = "C:\Pacientes\_Dat.accdb"
-dbType = "Microsoft Access"
-
-DoCmd.TransferDatabase acExport, dbType, dbDestination, acTable, tblName, tblName, False, True
 
 End Function
 
