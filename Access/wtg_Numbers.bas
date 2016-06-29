@@ -152,35 +152,41 @@ Dim strNumber As String
 End Function
 
 
-' TODO: arreglar esta función
-'--------------------------------------------------------
+'-------------------------------------------------------------------------------
+' Method  : wtg_OnlyNumbers
+' Author  : Juan M. Afán de Ribera <accessvba@ya.com>
+' Date    : Desconocida
+' Version : 1.0
+' Purpose : Anula las pulsaciones de las teclas que no sean números. Para ello
+'           evalua el valor de la tecla pulsada y en caso de no ser un número
+'           [0-9] anula su pulsación.
+' When    : En el evento KeyPress de un cuadro de texto, añadir la llamada al
+'           procedimiento.
+' Example : Call wtg_OnlyNumbers(KeyAscii)
 '
-' OnlyNumbers
-'
-' Código escrito originalmente por Juan M Afán de Ribera.
-' Estás autorizado a utilizarlo dentro de una aplicación
-' siempre que esta nota de autor permanezca inalterada.
-' En el caso de querer publicarlo en una página Web,
-' por favor, contactar con el autor en
-'
-'     accessvba@ya.com
-'
-' Este código se brinda por cortesía de
-' Juan M. Afán de Ribera
-'
+' @Param    integer   KeyAscii
+'-------------------------------------------------------------------------------
 Sub OnlyNumbers(KeyAscii As Integer)
-    ' si no es un número entre el 0 y el 9
-    ' o es un punto o una coma
+
+    ' Para saber el código equivalente a la tecla pulsada, podemos utilizar el
+    ' método debug.print para ver el código en la ventana de inmediato del IDE.
+    ' debug.print KeyAscii
+
+    ' Si no es un número entre el 0 y el 9
     If Not Chr(KeyAscii) Like "[0-9]" Then
+
         Select Case KeyAscii
+
             ' si es un retroceso, enter o tabulación
             Case vbKeyBack, vbKeyReturn, vbKeyTab
             ' no se hace nada
             Case Else
-                ' si no, se anula el caracter
-                ' introducido
+                ' Anulamos el caracter introducido
                 KeyAscii = 0
                 Beep
+
         End Select
+
     End If
+
 End Sub

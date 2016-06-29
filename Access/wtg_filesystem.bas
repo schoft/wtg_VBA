@@ -152,14 +152,20 @@ Dim strFilePath as string
             ' (El tercer parámetro es opcional)
             ' Ejemplo: .Add <Description>, <Extension>, <[position/index]>
 
-            ' Añadimos un filtro
+            ' Añadimos los filtros por defecto
+            .Add "Microsoft Access files", "*.accdb, *.mdb"
+            .Add "Microsoft Excel files", "*.xls, *.xlsx"
+            .Add "Microsoft Word files", "*.doc, *.docx"
             .Add "CSV files", "*.csv"
+            .Add "Adobe PDF files", "*.pdf"
+            .Add "Text files", "*.txt"
 
         End With
 
         ' Si hay más de un filtro de extensión, podemos seleccionar cual será
         ' seleccionado por defecto
         ' .filterindex = <index>
+        .filterindex = 1
 
         ' Mostramos la ventana
         ' Si el método .Show devuelve:

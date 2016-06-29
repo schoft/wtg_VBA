@@ -94,20 +94,63 @@ DoCmd.TransferDatabase acExport, dbType, dbDestination, acTable, tblName, tblNam
 
 End Function
 
-' TODO Arreglar esta función
-Private Sub Form_Load()
-DoCmd.RunCommand acCmdAppMaximize
+
+'-------------------------------------------------------------------------------
+' Procedure : wtg_OpenEditForm
+' Author    : Witigo
+' Date      : 26/11/2014
+' Version   : 1.0
+' Purpose   : Abre el formulario en modo EDICION.
+'             Opcionalmente se puede añadir una clausula where.
+'
+' @Param    String   strFormName
+' @Param    String   strWhere
+'-------------------------------------------------------------------------------
+Public Sub wtg_OpenEditForm( _
+                strFormName As String, _
+                Optional strWhere as string = "" _
+                )
+
+    ' Abrimos el formulario en modo edición
+    DoCmd.OpenForm strFormName, acNormal, , strWhere, acFormEdit, acWindowNormal
 
 End Sub
 
-' TODO Arreglar esta función
-Public Sub abrir(strForm As String)
 
-DoCmd.OpenForm strForm, , , , , acWindowNormal
+'-------------------------------------------------------------------------------
+' Procedure : wtg_OpenReadOnlyForm
+' Author    : Witigo
+' Date      : 26/11/2014
+' Version   : 1.0
+' Purpose   : Abre el formulario en modo SOLO LECTURA.
+'             Opcionalmente se puede añadir una clausula where.
+'
+' @Param    String   strFormName
+' @Param    String   strWhere
+'-------------------------------------------------------------------------------
+Public Sub wtg_OpenReadOnlyForm( _
+                strFormName As String, _
+                Optional strWhere as string = "" _
+                )
+
+    ' Abrimos el formulario en modo edición
+    DoCmd.OpenForm strFormName, acNormal, , strWhere, acFormEdit, acWindowNormal
+
 End Sub
 
-' TODO Arreglar esta función
-Public Sub cerrar_F(strForm As String)
 
-DoCmd.Close acForm, strForm
+'-------------------------------------------------------------------------------
+' Procedure : wtg_CloseForm
+' Author    : Witigo
+' Date      : 26/11/2014
+' Version   : 1.0
+' Purpose   : Cierra el formulario
+'
+' @Param    String   strFormName
+'-------------------------------------------------------------------------------
+Public Sub wtg_CloseForm(strFormName As String)
+
+    ' Cerramos el formulario sin guardar cambios.
+    DoCmd.Close acForm, strFormName, acSaveNo
+
 End Sub
