@@ -4,14 +4,13 @@ Option Explicit
 
 
 '-------------------------------------------------------------------------------
-' Method  : wtg_RemoveAccents
+' Method  : wtg_ClassCreator
 ' Author  : Witigo
 ' Date    : 01/06/2016
 ' Version : 1.0
-' Purpose : Quita los acentos, cedillas, dieresís de una cadena de texto.
+' Purpose : Genera toda la estructura de la clase a partir de una tabla.
 '
 ' @Param    string     strText
-' @return   string     strText
 '-------------------------------------------------------------------------------
 Public Function wtg_ClassCreator(strTable As String)
 
