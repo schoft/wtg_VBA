@@ -65,8 +65,8 @@ End Function
 ' Author    : Witigo
 ' Date      : 09/06/2013
 ' Version   : 1.0
-' Purpose   : Crea la tabla para almacenar los registros del log de sesiones de
-'             usuario de la aplicación
+' Purpose   : Crea en la base de datos una tabla para almacenar los registros
+'             de log de las sesiones de usuario en la aplicación...
 '-------------------------------------------------------------------------------
 Public Function wtg_CreateSessionLog_Table()
 
@@ -74,25 +74,31 @@ Dim dbs As dao.Database
 Dim tbl As dao.TableDef
 Dim fld As Field
 
-    Set dbs = CurrentDb
-    Set tbl = dbs.CreateTableDef(cstrSessionTableName)
+    ' Comprobamos si existe la tabla
+    if not wtg_CheckIfTableExists(cstrSessionTableName) then
 
-    Set fld = tbl.CreateField("SessionDate", dbDate)
-    tbl.Fields.Append fld
+        Set dbs = CurrentDb
+        Set tbl = dbs.CreateTableDef(cstrSessionTableName)
 
-    Set fld = tbl.CreateField("Terminal", dbText, 50)
-    tbl.Fields.Append fld
+        ' Insertamos los campos de la tabla
+        Set fld = tbl.CreateField("SessionDate", dbDate)
+        tbl.Fields.Append fld
 
-    Set fld = tbl.CreateField("User_ID", dbInteger)
-    tbl.Fields.Append fld
+        Set fld = tbl.CreateField("Terminal", dbText, 50)
+        tbl.Fields.Append fld
 
-    Set fld = tbl.CreateField("Result", dbText, 100)
-    tbl.Fields.Append fld
+        Set fld = tbl.CreateField("User_ID", dbInteger)
+        tbl.Fields.Append fld
 
-    Set fld = tbl.CreateField("ErrPassword", dbText, 50)
-    tbl.Fields.Append fld
+        Set fld = tbl.CreateField("Result", dbText, 100)
+        tbl.Fields.Append fld
 
-    dbs.TableDefs.Append tbl
-    dbs.TableDefs.Refresh
+        Set fld = tbl.CreateField("ErrPassword", dbText, 50)
+        tbl.Fields.Append fld
+
+        dbs.TableDefs.Append tbl
+        dbs.TableDefs.Refresh
+
+    end if
 
 End Function
