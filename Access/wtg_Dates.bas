@@ -8,11 +8,11 @@ Option Explicit
 ' Author  : Witigo
 ' Date    : 01/06/2016
 ' Version : 1.0
-' Purpose : Muestra una ventana FileDialog de Microsoft Office, que devuelve la
-'           ruta completa del directorio seleccionado.
+' Purpose : Comprueba si la fecha pasada como argumento corresponde a Domingo.
+'           Devuelve VERDADERO si es Domingo
 '
 ' @Param    date     dtDate
-' @return   boolean  strFolderPath
+' @return   boolean  wtg_IsSunday
 '-------------------------------------------------------------------------------
 Public Function wtg_IsSunday(dtDate As Date) As Boolean
 

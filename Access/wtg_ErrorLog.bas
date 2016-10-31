@@ -15,12 +15,12 @@ Const cstrErrorTableName As String = "dbo_ErrorLog"
 ' Version   : 1.0
 ' Purpose   : Escribe un registro de log en una tabla de la aplicación.
 '
-' @Param    String   strSource
-' @Param    String   strErrNumber
-' @Param    String   strDescription
-' @Param    String   strProcedure
-' @Param    String   strModuleType
-' @Param    String   strModuleName
+' @Param    String   strSource        Origen
+' @Param    String   strErrNumber     Número de error
+' @Param    String   strDescription   Descripción del error
+' @Param    String   strProcedure     Nombre del procedimiento
+' @Param    String   strModuleType    Nombre del módulo
+' @Param    String   strModuleName    Tipo de módulo
 '-------------------------------------------------------------------------------
 Public Function wtg_WriteErrorLog( _
                     strSource As String, _
@@ -79,14 +79,20 @@ Dim strTerminal As String
 End Function
 
 
-
-'---------------------------------------------------------------------------------------
-' Procedure : ErrorLog
+'-------------------------------------------------------------------------------
+' Procedure : wtg_WriteErrorLogFile
 ' Author    : Witigo
 ' Date      : 09/06/2013
 ' Version   : 1.0
-' Purpose   : Hacer Log de los errores de la aplicación.
-'---------------------------------------------------------------------------------------
+' Purpose   : Escribe en un fichero de log los errores de la aplicación.
+'
+' @Param    String   strSource        Origen
+' @Param    String   strErrNumber     Número de error
+' @Param    String   strDescription   Descripción del error
+' @Param    String   strProcedure     Nombre del procedimiento
+' @Param    String   strModuleType    Nombre del módulo
+' @Param    String   strModuleName    Tipo de módulo
+'-------------------------------------------------------------------------------
 Public Function wtg_WriteErrorLogFile( _
                     strSource As String, _
                     strErrNumber As String, _
@@ -103,25 +109,30 @@ Dim strFichero As String
 Dim strDBUser
 
     If Len(Trim(gvarSesion.strUsuario)) = 0 Then
+
         ' Si no hay usuario autenticado, establecemos por defecto "Desconocido"
         strDBUser = "Desconocido"
+
     Else
+
         ' Obtenemos el nombre del usuario de la aplicación
         strDBUser = gvarSesion.strUsuario
+
     End If
 
     ' Abrimos el fichero para introducir datos
     Open strFichero For Append Lock Write As #1
 
     '-- Write some basic info then close the file
-    Print #1, "================================================================"
+    Print #1, "================================================================================"
     Print #1, "   ERROR  (" & GetOSComputerName() & "\" & GetOSUserName() & ")  -   " & Date & " " & Time
-    Print #1, "================================================================"
+    Print #1, "================================================================================"
     Print #1, "   Número de error          : " & NumError
     Print #1, "   Origen del error         : " & Origen
     Print #1, "   Tipo de procedimiento    : " & TipoModulo & " >>> " & Modulo
     Print #1, "   Nombre del procedimiento : " & Procedimiento
     Print #1, "   Descripción del error    : " & Descripcion
+    Print #1, ""
     Print #1, ""
 
     ' Cerramos el fichero
@@ -129,19 +140,15 @@ Dim strDBUser
 
 End Function
 
+
 '-------------------------------------------------------------------------------
 ' Procedure : wtg_CreateErrorLog_Table
 ' Author    : Witigo
 ' Date      : 09/06/2013
 ' Version   : 1.0
-' Purpose   : Escribe un registro de log en una tabla de la aplicación.
+' Purpose   : Crea una tabla en la base de datos para almacenar los logs de
+'             error de la aplicación.
 '
-' @Param    String   strSource
-' @Param    String   strErrNumber
-' @Param    String   strDescription
-' @Param    String   strProcedure
-' @Param    String   strModuleType
-' @Param    String   strModuleName
 '-------------------------------------------------------------------------------
 Public Function wtg_CreateErrorLog_Table()
 
@@ -149,37 +156,42 @@ Dim dbs As dao.Database
 Dim tbl As dao.TableDef
 Dim fld As Field
 
-    Set dbs = CurrentDb
-    Set tbl = dbs.CreateTableDef(cstrErrorTableName)
+    ' Comprobamos si existe la tabla
+    if not wtg_CheckIfTableExists(cstrSessionTableName) then
 
-    Set fld = tbl.CreateField("ErrDate", dbText, 50)
-    tbl.Fields.Append fld
+        Set dbs = CurrentDb
+        Set tbl = dbs.CreateTableDef(cstrErrorTableName)
 
-    Set fld = tbl.CreateField("ErrSource", dbText, 50)
-    tbl.Fields.Append fld
+        Set fld = tbl.CreateField("ErrDate", dbText, 50)
+        tbl.Fields.Append fld
 
-    Set fld = tbl.CreateField("ErrNumber", dbInteger)
-    tbl.Fields.Append fld
+        Set fld = tbl.CreateField("ErrSource", dbText, 50)
+        tbl.Fields.Append fld
 
-    Set fld = tbl.CreateField("ErrDescription", dbText, 255)
-    tbl.Fields.Append fld
+        Set fld = tbl.CreateField("ErrNumber", dbInteger)
+        tbl.Fields.Append fld
 
-    Set fld = tbl.CreateField("ProcedureType", dbText, 50)
-    tbl.Fields.Append fld
+        Set fld = tbl.CreateField("ErrDescription", dbText, 255)
+        tbl.Fields.Append fld
 
-    Set fld = tbl.CreateField("ProcedureName", dbText, 50)
-    tbl.Fields.Append fld
+        Set fld = tbl.CreateField("ProcedureType", dbText, 50)
+        tbl.Fields.Append fld
 
-    Set fld = tbl.CreateField("AppUser", dbText, 50)
-    tbl.Fields.Append fld
+        Set fld = tbl.CreateField("ProcedureName", dbText, 50)
+        tbl.Fields.Append fld
 
-    Set fld = tbl.CreateField("WinUser", dbText, 50)
-    tbl.Fields.Append fld
+        Set fld = tbl.CreateField("AppUser", dbText, 50)
+        tbl.Fields.Append fld
 
-    Set fld = tbl.CreateField("Terminal", dbText, 50)
-    tbl.Fields.Append fld
+        Set fld = tbl.CreateField("WinUser", dbText, 50)
+        tbl.Fields.Append fld
 
-    dbs.TableDefs.Append tbl
-    dbs.TableDefs.Refresh
+        Set fld = tbl.CreateField("Terminal", dbText, 50)
+        tbl.Fields.Append fld
+
+        dbs.TableDefs.Append tbl
+        dbs.TableDefs.Refresh
+
+    end if
 
 End Function

@@ -37,7 +37,18 @@ Dim strDatabaseType As String
 End Function
 
 
-' TODO Terminar este modulo
+'-------------------------------------------------------------------------------
+' Method  : wtg_ExportReportPDF
+' Author  : Witigo
+' Date    : 01/06/2016
+' Version : 1.0
+' Purpose : Exporta el informe a formato PDF
+'
+' @Param    string     strReportName
+' @Param    string     strCriteria
+' @return   string     strText
+'-------------------------------------------------------------------------------
+' TODO Terminar este modulo, debería permitir elegir que directorio y nombre de fichero queremos utilizar...
 Public Function wtg_ExportReportPDF( _
                     strReportName As String, _
                     strCriteria As String
@@ -49,9 +60,7 @@ Dim strOutputFile As String
     ' Formateamos la fecha
     strDate = Format(Date, "ddmmyy")
     ' Buscamos el valor en la tabla
-    strOutputFile = wtg_SelectFile
-    strOutputFile = DLookup("[Dir_Reports]", "db_o_Settings", "[ID]=1")
-    strOutputFile = strOutputFile & "\" & strDate & "_Campaña" & ".pdf"
+    strOutputFile = CurrentProject.Path & "\Reports\" & strDate & "_Report" & ".pdf"
 
     ' Abrimos el informe
     DoCmd.OpenReport strReprotName, acViewPreview, , strCriteria

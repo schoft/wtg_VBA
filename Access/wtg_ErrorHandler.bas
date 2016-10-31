@@ -8,7 +8,8 @@ Option Explicit
 ' Author    : Witigo
 ' Date      : 09/06/2013
 ' Version   : 1.0
-' Purpose   :
+' Purpose   : Captura los mensajes de error de Ms Access y los muestra ya
+'             formateados en una ventana de información/error
 '
 ' @Param    String   strSource
 ' @Param    Integer  intErrNumber
