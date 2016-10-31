@@ -1,0 +1,32 @@
+Attribute VB_Name = "wtg_Helpers"
+Option Compare Database
+Option Explicit
+
+
+'--------------------------------------------------------------------------------
+' Method : wtg_DisablePag
+' Author : witigo
+' Date   : 28/10/2016
+' Version: 1.0
+' Purpose: Deshabilita el uso de las teclas AvPag y RePag para el cambio de
+'          registro en formularios...
+' Use    : In form_KeyDown method...
+'          KeyCode = wtg_DisablePag(KeyCode)
+'
+' @Param    Integer     intKeyPress
+'--------------------------------------------------------------------------------
+Public Function wtg_DisablePag(intKeyPress As Integer) As Integer
+
+    Select Case intKeyPress
+    
+        Case 33, 34
+        
+            wtg_DisablePag = 0
+        
+        Case Else
+        
+            wtg_DisablePag = intKeyPress
+    
+    End Select
+    
+End Function
