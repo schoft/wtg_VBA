@@ -4,20 +4,15 @@ Option Explicit
 
 
 '-------------------------------------------------------------------------------
-<<<<<<< HEAD
 ' Method  : wtg_IsFormLoaded
-=======
 ' Method  : wtg_CheckIfTableExists
->>>>>>> origin/master
 ' Author  : Witigo
 ' Date    : 01/06/2016
 ' Version : 1.0
 ' Purpose : Comprueba si existe una tabla en la base de datos
 '
-<<<<<<< HEAD
 ' @Param    string   strFormName
 ' @return   boolean  strFolderPath
-=======
 ' @Param    date     strTableName
 ' @return   boolean  wtg_CheckIfTableExists
 '-------------------------------------------------------------------------------
@@ -71,7 +66,6 @@ End Function
 '
 ' @Param    date     strFormName
 ' @return   boolean  wtg_IsFormLoaded
->>>>>>> origin/master
 '-------------------------------------------------------------------------------
 Public Function wtg_IsFormLoaded(ByVal strFormName As String) As Boolean
 
