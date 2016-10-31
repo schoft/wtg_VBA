@@ -64,7 +64,7 @@ Public Sub wtg_FormCaption(strFormName As String, _
         
         Else
         
-        	' Formulario abierto en modo sólo lectura
+            ' Formulario abierto en modo sólo lectura
             Forms(strFormName).Form.Caption = "Detalles " & strObjetivo
         
         End If
