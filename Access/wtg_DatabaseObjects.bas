@@ -4,14 +4,14 @@ Option Explicit
 
 
 '-------------------------------------------------------------------------------
-' Method  : wtg_IsSunday
+' Method  : wtg_IsFormLoaded
 ' Author  : Witigo
 ' Date    : 01/06/2016
 ' Version : 1.0
 ' Purpose : Muestra una ventana FileDialog de Microsoft Office, que devuelve la
 '           ruta completa del directorio seleccionado.
 '
-' @Param    date     dtDate
+' @Param    string   strFormName
 ' @return   boolean  strFolderPath
 '-------------------------------------------------------------------------------
 Public Function wtg_IsFormLoaded(ByVal strFormName As String) As Boolean
