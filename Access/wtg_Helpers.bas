@@ -21,12 +21,12 @@ Public Function wtg_DisablePag(intKeyPress As Integer) As Integer
     
         Case 33, 34
         
-        	' Deshabilitamos la puslación de tecla
+            ' Deshabilitamos la puslación de tecla
             wtg_DisablePag = 0
         
         Case Else
         
-        	' Devolvemos el valor de la pulsación de tecla
+            ' Devolvemos el valor de la pulsación de tecla
             wtg_DisablePag = intKeyPress
     
     End Select
