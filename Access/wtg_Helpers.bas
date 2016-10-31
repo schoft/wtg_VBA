@@ -40,7 +40,7 @@ End Function
 ' Date    : 31/10/2016
 ' Version : 1.0
 ' Purpose : Establece el nombre del formulario dependiendo de la operatoria con 
-' 			el formulario...
+'           el formulario...
 '
 ' @Param    String  StrFormName
 ' @Param    String  StrObjetivo
