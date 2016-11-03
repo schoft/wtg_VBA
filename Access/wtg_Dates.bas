@@ -11,10 +11,12 @@ Option Explicit
 ' Purpose : Comprueba si la fecha pasada como argumento corresponde a Domingo.
 '           Devuelve VERDADERO si es Domingo
 '
-' @Param    date     dtDate
-' @return   boolean  wtg_IsSunday
+' @Param    Date     dtDate
+' @Return   Boolean  wtg_IsSunday
 '-------------------------------------------------------------------------------
-Public Function wtg_IsSunday(dtDate As Date) As Boolean
+Public Function wtg_IsSunday( _
+					dtDate As Date _
+					) As Boolean
 
 Dim bolSunday As Boolean
 
