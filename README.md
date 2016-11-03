@@ -62,17 +62,33 @@ Variables globales usadas para la gestión de las sesiones.
 
 ### wtg_Numbers
 
+En este módulo, hay funciones para trabajar con números...
+
+	- Con **wtg_RandomNumber** podemos generar un número aleatorio comprendido entre 2 números (min y max)
+	- Con **wtg_OrdinalNumber** podemos generar el texto/número ordinal a partir de un número decimal.
+	- Con **wtg_OnlyNumbers** podemos anular la introducción de cualquier caracter que no sea un número.
+
+> Quiero mostrar mi agradecimiento a Juan M. Afán de Ribera creador de la función wtg_OnlyNumbers (no es su nombre original)
 
 [Ver...](https://github.com/witigo/wtg_VBA/blob/master/Access/wtg_Numbers.bas)
 
 ### wtg_Questions
 
-En este módulo, hay funciones que generan las preguntas comunes en la base de datos. (Guardar, Eliminar, etc...)
+En este módulo, hay funciones que generan las preguntas comunes en la base de datos.
+
+	- Con **wtg_Eliminar** mostramos un messagebox con la pregunta "¿Desea eliminar el registro?"
+	- Con **wtg_Guardar** mostramos un messagebox con la pregunta "¿Desea guardar los cambios?"
 
 [Ver...](https://github.com/witigo/wtg_VBA/blob/master/Access/wtg_Questions.bas)
 
 ### wtg_SessionLog
 
+En este módulo, hay funciones para trabajar con las sesiones de usuario en la aplicación.
+
+> Para trabajar con sesiones de usuario en nuestra aplicación, es **muy importante** controlar todos los errores, ya que cualquier error no controlado, cierra/borra la sesión.
+
+	- Con **wtg_WriteSesionLog** insertamos un registro con la información de la sesión en la tabla de logs de sesíón.
+	- Con **wtg_CreateSessionLog_Table** podemos crear de forma automática la tabla para las sesiones de usuario de la aplicación.
 
 [Ver...](https://github.com/witigo/wtg_VBA/blob/master/Access/wtg_SessionLog.bas)
 
@@ -80,14 +96,17 @@ En este módulo, hay funciones que generan las preguntas comunes en la base de d
 
 En este módulo, hay funciones para trabajar con cadenas de texto...
 
-	- Con wtg_StripAccent podemos quitar los acentos diacríticos, dieresis y comillas de un cadena de texto.
-	- Con wtg_CutString podemos cortar una cadena de texto a una longitud determinada.
-	- Con wtg_Tabs podemos insertar un número equivalente de espacios a una tabulación.
+	- Con **wtg_StripAccent** podemos quitar los acentos diacríticos, dieresis y comillas de un cadena de texto.
+	- Con **wtg_CutString** podemos cortar una cadena de texto a una longitud determinada.
+	- Con **wtg_Tabs** podemos insertar un número equivalente de espacios a una tabulación.
 
 [Ver...](https://github.com/witigo/wtg_VBA/blob/master/Access/wtg_Strings.bas)
 
 ### wtg_Tables
 
 En este módulo, hay funciones comunes para trabajar con las tablas de la base de datos.
+
+	- Con **wtg_EliminarRegistro** podemos eliminar un registro determinado de la tabla objetivo.
+	- Con **wtg_CheckRegistro** podemos comprobar si existe un registro determinado un la tabla objetivo.
 
 [Ver...](https://github.com/witigo/wtg_VBA/blob/master/Access/wtg_Tables.bas)
