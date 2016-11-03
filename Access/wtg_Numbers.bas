@@ -15,23 +15,24 @@ End Enum
 ' Method  : wtg_RandomNumber
 ' Author  : Witigo
 ' Date    : 01/06/2016
-' Version : 1.0
+' Version : 1.0.1
 ' Purpose : Genera un número aleatorio comprendido entre dos números dados.
 '
-' @Param    integer     intMinimo
-' @Param    integer     intMaximo
-' @return   integer     intRandomNumber
+' @Param    Integer    intMinNumber
+' @Param    Integer    intMaxNumber
+' @Return   Integer
 '-------------------------------------------------------------------------------
 Public Function wtg_RandomNumber( _
                     intMinNumber As integer, _
                     intMaxNumber as integer _
                     ) As integer
 
+Dim intResult as integer
 Dim intRandomNumber As integer
 
-    intRandomNumber = intMaxNumber - intMinNumber + 1
-    intRandomNumber = CInt(Int(intRandomNumber * Rnd())) + intMinNumber
-    'intRandomNumber = CInt(Int((intMaxNumber - intMinNumber + 1) * Rnd())) + intMinNumber
+    intResult = intMaxNumber - intMinNumber + 1
+
+    intRandomNumber = CInt(Int(intResult * Rnd())) + intMinNumber
 
     wtg_RandomNumber = intRandomNumber
 
@@ -52,10 +53,10 @@ End Function
 '           meros primero y tercero, debemos seleccionar TRUE en el valor
 '           boleano bolApocope...
 '
-' @Param    integer   intNumber
-' @Param    enum      eGender
-' @Param    boolean   bolApocope
-' @return   string    strNumber
+' @Param    Integer   intNumber
+' @Param    Enum      eGender
+' @Param    Boolean   bolApocope
+' @Return   String
 '-------------------------------------------------------------------------------
 Public Function wtg_OrdinalNumber( _
                     intNumber As Integer, _
@@ -164,9 +165,11 @@ End Function
 '           procedimiento.
 ' Example : Call wtg_OnlyNumbers(KeyAscii)
 '
-' @Param    integer   KeyAscii
+' @Param    Integer    KeyAscii
 '-------------------------------------------------------------------------------
-Sub wtg_OnlyNumbers(KeyAscii As Integer)
+Sub wtg_OnlyNumbers( _
+        KeyAscii As Integer _
+        )
 
     ' Para saber el código equivalente a la tecla pulsada, podemos utilizar el
     ' método debug.print para ver el código en la ventana de inmediato del IDE.
