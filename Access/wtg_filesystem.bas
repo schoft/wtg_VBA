@@ -22,8 +22,8 @@ Option Explicit
 ' Purpose : Muestra una ventana FileDialog de Microsoft Office, que devuelve la
 '           ruta completa del directorio seleccionado.
 '
-' @Param    string  strTitle
-' @return   string  strFolderPath
+' @Param    String    strTitle
+' @Return   String    strFolderPath
 '-------------------------------------------------------------------------------
 Public Function wtg_SelectFolder( _
                     Optional strTitle As String = "Seleccione un directorio" _
@@ -70,7 +70,7 @@ End Function
 ' Purpose : Muestra una ventana FileDialog de Microsoft Office, de tipo SaveAs
 '           que devuelve la ruta completa del fichero que queremos guardar.
 '
-' @return   string  strFullFilePath
+' @Return   String    strFullFilePath
 '-------------------------------------------------------------------------------
 Public Function wtg_SaveFileAs() As String
 
@@ -116,8 +116,8 @@ End Function
 ' Purpose : Muestra una ventana FileDialog de Microsoft Office, que devuelve la
 '           ruta completa del fichero seleccionado.
 '
-' @Param    string  strTitle
-' @return   string  strFilePath
+' @Param    String    strTitle
+' @Return   String    strFilePath
 '-------------------------------------------------------------------------------
 Public Function wtg_SelectFile( _
                     Optional strTitle As String = "Select a folder" _
@@ -188,10 +188,12 @@ End Function
 ' Version : 1.0
 ' Purpose : Comprueba la existencia de un directorio.
 '
-' @Param    string    strFolderPath
-' @return   boolean   bolFolderPath
+' @Param    String    strFolderPath
+' @Return   Boolean   bolFolderPath
 '-------------------------------------------------------------------------------
-Public Function wtg_FolderExist(strFolderPath As String) As Boolean
+Public Function wtg_FolderExist( _
+                    strFolderPath As String _
+                    ) As Boolean
 
 Dim bolFolderPath As Boolean
 
