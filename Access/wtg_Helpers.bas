@@ -13,9 +13,12 @@ Option Explicit
 ' Use    : In form_KeyDown method...
 '          KeyCode = wtg_DisablePag(KeyCode)
 '
-' @Param    Integer     intKeyPress
+' @Param    Integer    intKeyPress
+' @Return   Integer
 '--------------------------------------------------------------------------------
-Public Function wtg_DisablePag(intKeyPress As Integer) As Integer
+Public Function wtg_DisablePag( _
+                    intKeyPress As Integer _
+                    ) As Integer
 
     Select Case intKeyPress
     
@@ -43,10 +46,12 @@ End Function
 '           el formulario...
 '
 ' @Param    String  StrFormName
-' @Param    String  StrObjetivo
+' @Param    String  StrObjetivo    Optional
 '--------------------------------------------------------------------------------
-Public Sub wtg_FormCaption(strFormName As String, _
-                           Optional strObjetivo As String = "")
+Public Sub wtg_FormCaption( _
+                strFormName As String, _
+                Optional strObjetivo As String = "" _
+                )
 
     ' Comprobamos si es un nuevo registro
     If Forms(strFormName).Form.NewRecord Then
