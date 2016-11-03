@@ -199,7 +199,7 @@ End Function
 ' Purpose : Devuevle el nombre del tipo de campo de las tablas.
 '
 ' @Param    integer   intTableFieldType
-' @return   string    strFieldType
+' @Return   string    strFieldType
 '-------------------------------------------------------------------------------
 Private Function wtg_GetFieldType(intTableFieldType As Integer) As String
 
@@ -266,7 +266,7 @@ End Function
 '           (Lezinsky Naming Convention)
 '
 ' @Param    integer    intTableFieldType
-' @return   string     strLCN
+' @Return   string     strLCN
 '-------------------------------------------------------------------------------
 Private Function wtg_GetPrefixType(intTableFieldType As Integer) As String
 
