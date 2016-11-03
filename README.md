@@ -41,6 +41,15 @@ En este módulo hay funciones y procedimientos para crear un log de errores de n
 
 ### wtg_FileSystem
 
+En este módulo, hay funciones para trabajar con el sistema de ficheros del sistema operativo.
+
+	- Con **wtg_SelectFolder** mostramos un fileDialog para seleccionar un directorio.
+	La función nos devuelve la ruta completa del directorio.
+	- Con **wtg_SaveFileAs** mostramos un fileDialog para guardar un fichero en un directorio.
+	La función nos devuelve la ruta completa del fichero a guardar.
+	- Con **wtg_SelectFile** mostramos un fileDialog para seleccionar un fichero.
+	La función nos devuelve la ruta completa del fichero a seleccionar.
+	- Con **wtg_FolderExist** comprobamos la existencia de un directorio.
 
 [Ver...](https://github.com/witigo/wtg_VBA/blob/master/Access/wtg_FileSystem.bas)
 
@@ -57,6 +66,14 @@ Variables globales usadas para la gestión de las sesiones.
 
 ### wtg_IPAddress
 
+En este módulo, encontramos funciones para trabajar con direcciones IP
+
+	- Con **wtg_ValidateIP** podemos validar una dirección IP.
+	- Con **wtg_IP2Long** podemos convertir una dirección IP a un número de tipo Long.
+	- Con **wtg_Long2IP** podemos convertir un número de tipo Long a una dirección IP.
+	- Con **wtg_Zeros4IP** podemos mostrar una dirección IP con los ceros a la izquierda.
+	(ejemplo: 192.168.001.001)
+
 
 [Ver...](https://github.com/witigo/wtg_VBA/blob/master/Access/wtg_IPAddress.bas)
 
@@ -64,11 +81,15 @@ Variables globales usadas para la gestión de las sesiones.
 
 En este módulo, hay funciones para trabajar con números...
 
-	- Con **wtg_RandomNumber** podemos generar un número aleatorio comprendido entre 2 números (min y max)
-	- Con **wtg_OrdinalNumber** podemos generar el texto/número ordinal a partir de un número decimal.
-	- Con **wtg_OnlyNumbers** podemos anular la introducción de cualquier caracter que no sea un número.
+	- Con **wtg_RandomNumber** podemos generar un número aleatorio comprendido entre 2 números 
+	(min y max)
+	- Con **wtg_OrdinalNumber** podemos generar el texto/número ordinal a partir de un número 
+	decimal.
+	- Con **wtg_OnlyNumbers** podemos anular la introducción de cualquier caracter que no sea 
+	un número.
 
-> Quiero mostrar mi agradecimiento a Juan M. Afán de Ribera creador de la función wtg_OnlyNumbers (no es su nombre original)
+> Quiero mostrar mi agradecimiento a Juan M. Afán de Ribera creador de la función wtg_OnlyNumbers 
+(wtg_OnlyNumbers no es su nombre original)
 
 [Ver...](https://github.com/witigo/wtg_VBA/blob/master/Access/wtg_Numbers.bas)
 
@@ -87,8 +108,10 @@ En este módulo, hay funciones para trabajar con las sesiones de usuario en la a
 
 > Para trabajar con sesiones de usuario en nuestra aplicación, es **muy importante** controlar todos los errores, ya que cualquier error no controlado, cierra/borra la sesión.
 
-	- Con **wtg_WriteSesionLog** insertamos un registro con la información de la sesión en la tabla de logs de sesíón.
-	- Con **wtg_CreateSessionLog_Table** podemos crear de forma automática la tabla para las sesiones de usuario de la aplicación.
+	- Con **wtg_WriteSesionLog** insertamos un registro con la información de la sesión en la tabla de 
+	logs de sesión.
+	- Con **wtg_CreateSessionLog_Table** podemos crear de forma automática la tabla para las sesiones 
+	de usuario de la aplicación.
 
 [Ver...](https://github.com/witigo/wtg_VBA/blob/master/Access/wtg_SessionLog.bas)
 
