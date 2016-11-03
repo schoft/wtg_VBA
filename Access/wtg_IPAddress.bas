@@ -24,10 +24,12 @@ Option Explicit
 ' Version : 1.0
 ' Purpose : Realiza la validación de una IP
 '
-' @param    variant    varIPAddress
-' @return   boolean    wtg_ValidateIP
+' @Param    Variant    varIPAddress
+' @Return   Boolean
 '-------------------------------------------------------------------------------
-Public Function wtg_ValidateIP(varIPAddress As Variant) As Boolean
+Public Function wtg_ValidateIP( _
+                    varIPAddress As Variant _
+                    ) As Boolean
 
 Dim bolResult  As Boolean
 Dim intLoop    As Integer
@@ -80,10 +82,12 @@ End Function
 ' Purpose : Realiza la conversión de una dirección IP válida a un número de tipo
 '           Long para poder almacenarlo en la base de datos.
 '
-' @param    variant    varIPAddress
-' @return   variant    wtg_IP2Long
+' @Param    variant    varIPAddress
+' @Return   variant    wtg_IP2Long
 '-------------------------------------------------------------------------------
-Public Function wtg_IP2Long(varIPAddress As Variant) As Variant
+Public Function wtg_IP2Long( _
+                    varIPAddress As Variant _
+                    ) As Variant
 
 Dim IntLoop    As Integer
 Dim intNumber  As Integer
@@ -127,10 +131,12 @@ End Function
 ' Version : 1.0
 ' Purpose : Realiza la conversión de un número de tipo Long a una dirección IP.
 '
-' @param    variant    varLong
-' @return   variant    wtg_Long2IP
+' @Param    variant    varLong
+' @Return   variant    wtg_Long2IP
 '-------------------------------------------------------------------------------
-Public Function wtg_Long2IP(varLong As Variant) As Variant
+Public Function wtg_Long2IP( _
+                    varLong As Variant _
+                    ) As Variant
 
 Dim IntLoop    As Integer
 Dim intNumber  As Integer
@@ -178,10 +184,12 @@ End Function
 ' Version : 1.0
 ' Purpose : Añade ceros delante del número, para que este tenga siempre 3 cifras.
 '
-' @param    integer   intNumber
-' @return   string    wtg_Zeros4IP
+' @Param    Integer   intNumber
+' @Return   String    wtg_Zeros4IP
 '-------------------------------------------------------------------------------
-Public Function wtg_Zeros4IP(intNumber As Integer) As String
+Public Function wtg_Zeros4IP( _
+                    intNumber As Integer _
+                    ) As String
 
 Dim strNumber as string
 
