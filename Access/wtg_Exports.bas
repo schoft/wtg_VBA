@@ -10,8 +10,9 @@ Option Explicit
 ' Version : 1.0
 ' Purpose : Exporta la tabla indicada a otra base de datos.
 '
-' @Param    string     strTableName
-' @return   string     strText
+' @Param    String    strTableName
+' @Param    String    strDestinationDatabase
+' @Return   Boolean
 '-------------------------------------------------------------------------------
 Public Function wtg_ExportTableToDatabase( _
                     strTableName As String, _
@@ -46,7 +47,6 @@ End Function
 '
 ' @Param    string     strReportName
 ' @Param    string     strCriteria
-' @return   string     strText
 '-------------------------------------------------------------------------------
 ' TODO Terminar este modulo, debería permitir elegir que directorio y nombre de fichero queremos utilizar...
 Public Function wtg_ExportReportPDF( _
