@@ -4,19 +4,18 @@ Option Explicit
 
 
 '-------------------------------------------------------------------------------
-' Method  : wtg_IsFormLoaded
 ' Method  : wtg_CheckIfTableExists
 ' Author  : Witigo
 ' Date    : 01/06/2016
 ' Version : 1.0
 ' Purpose : Comprueba si existe una tabla en la base de datos
 '
-' @Param    string   strFormName
-' @return   boolean  strFolderPath
-' @Param    date     strTableName
-' @return   boolean  wtg_CheckIfTableExists
+' @Param    Date     strTableName
+' @Return   Boolean
 '-------------------------------------------------------------------------------
-Public Function wtg_CheckIfTableExists(strTableName As String) As Boolean
+Public Function wtg_CheckIfTableExists( _
+                    strTableName As String _
+                    ) As Boolean
 
 Dim dbs As DAO.Database
 Dim rst As DAO.Recordset
@@ -64,10 +63,12 @@ End Function
 ' Version : 1.0
 ' Purpose : Comprueba si un formulario está cargado.
 '
-' @Param    date     strFormName
-' @return   boolean  wtg_IsFormLoaded
+' @Param    String     strFormName
+' @Return   Boolean
 '-------------------------------------------------------------------------------
-Public Function wtg_IsFormLoaded(ByVal strFormName As String) As Boolean
+Public Function wtg_IsFormLoaded( _
+                    ByVal strFormName As String _
+                    ) As Boolean
 
 Dim objForm As Object
 
@@ -87,19 +88,15 @@ End Function
 ' Procedure : wtg_IsRuntime
 ' Author    : Witigo
 ' Date      : 01/02/2014
-' Version   : 1.0
+' Version   : 1.0.1
 ' Purpose   : Comprueba el modo de funcionamiento de la aplicación y devuelve
 '             VERDADERO si la aplicación se está ejecutando en modo RunTime...
 '
-' @return   boolean  wtg_IsRuntime
+' @Return   Boolean
 '-------------------------------------------------------------------------------
 Public Function wtg_IsRuntime() As Boolean
 
-Dim bolRunTime As Boolean
-
-    bolRunTime = Application.SysCmd(acSysCmdRuntime)
-
-    wtg_IsRuntime = bolRunTime
+    wtg_IsRuntime = Application.SysCmd(acSysCmdRuntime)
 
 End Function
 
@@ -114,7 +111,9 @@ End Function
 '
 ' @Param    String   strMessage
 '-------------------------------------------------------------------------------
-Public Function wtg_StatusBar(Optional strMessage As String = vbNullString)
+Public Function wtg_StatusBar( _
+                    Optional strMessage As String = vbNullString _
+                    )
 
 Dim Temp As Variant
 
@@ -143,16 +142,18 @@ End Function
 ' Purpose   : Abre el formulario en modo EDICION.
 '             Opcionalmente se puede añadir una clausula where.
 '
-' @Param    String   strFormName
-' @Param    String   strWhere
+' @Param    String    strFormName
+' @Param    String    strWhere
+' @Param    String    strOpenArgs
 '-------------------------------------------------------------------------------
 Public Sub wtg_OpenEditForm( _
                 strFormName As String, _
                 Optional strWhere as string = "" _
+                Optional strOpenArgs As String = "" _
                 )
 
     ' Abrimos el formulario en modo edición
-    DoCmd.OpenForm strFormName, acNormal, , strWhere, acFormEdit, acWindowNormal
+    DoCmd.OpenForm strFormName, acNormal, , strWhere, acFormEdit, acWindowNormal, strOpenArgs
 
 End Sub
 
@@ -161,20 +162,22 @@ End Sub
 ' Procedure : wtg_OpenReadOnlyForm
 ' Author    : Witigo
 ' Date      : 26/11/2014
-' Version   : 1.0
+' Version   : 1.0.1
 ' Purpose   : Abre el formulario en modo SOLO LECTURA.
 '             Opcionalmente se puede añadir una clausula where.
 '
-' @Param    String   strFormName
-' @Param    String   strWhere
+' @Param    String    strFormName
+' @Param    String    strWhere
+' @Param    String    strOpenArgs
 '-------------------------------------------------------------------------------
 Public Sub wtg_OpenReadOnlyForm( _
                 strFormName As String, _
                 Optional strWhere as string = "" _
+                Optional strOpenArgs As String = "" _
                 )
 
     ' Abrimos el formulario en modo edición
-    DoCmd.OpenForm strFormName, acNormal, , strWhere, acFormEdit, acWindowNormal
+    DoCmd.OpenForm strFormName, acNormal, , strWhere, acFormEdit, acWindowNormal, strOpenArgs
 
 End Sub
 
@@ -188,7 +191,9 @@ End Sub
 '
 ' @Param    String   strFormName
 '-------------------------------------------------------------------------------
-Public Sub wtg_CloseForm(strFormName As String)
+Public Sub wtg_CloseForm( _
+                strFormName As String _
+                )
 
     ' Cerramos el formulario sin guardar cambios.
     DoCmd.Close acForm, strFormName, acSaveNo
