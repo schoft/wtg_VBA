@@ -7,18 +7,19 @@ Option Explicit
 ' Method  : wtg_Eliminar
 ' Author  : witigo
 ' Date    : 03/11/2016
-' Version : 1.0
+' Version : 1.0.1
 ' Purpose : Pregunta para eliminar un registro
 '
+' @Param    String    strMessage    Optional
 ' @Return	Boolean
 '--------------------------------------------------------------------------------
-Public Function wtg_Eliminar() As Boolean
+Public Function wtg_Eliminar( _
+                    Optional strMessage as string = "¿Desea eliminar el registro?" _
+                    ) As Boolean
 
 Dim strCaption as String
-Dim strMessage As String
 
 	strCaption = "Eliminar"
-    strMessage = "¿Desea eliminar el registro?"
     
     Select Case MsgBox(strMessage, vbYesNo Or vbQuestion, strCaption)
         
@@ -39,18 +40,19 @@ End Function
 ' Method  : wtg_Guardar
 ' Author  : witigo
 ' Date    : 03/11/2016
-' Version : 1.0
+' Version : 1.0.1
 ' Purpose : Pregunta para guardar los cambios a un registro
 '
-' @Return	Boolean
+' @Param    String    strMessage    Optional
+' @Return   Boolean
 '--------------------------------------------------------------------------------
-Public Function wtg_Guardar() As Boolean
+Public Function wtg_Guardar( _
+                    Optional strMessage as string = "¿Desea eliminar el registro?" _
+                    ) As Boolean
 
 Dim strCaption as String
-Dim strMessage As String
 
 	strCaption = "Guardar"
-    strMessage = "¿Desea guardar los cambios realizados?"
     
     Select Case MsgBox(strMessage, vbYesNo Or vbQuestion, strCaption)
         
