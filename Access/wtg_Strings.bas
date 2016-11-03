@@ -10,9 +10,9 @@ Option Explicit
 ' Version : 1.0
 ' Purpose: Corta una cadena de texto a una determinada longitud
 '
-' @param    string    strMessage
-' @param    integer   intLenght
-' @return   string    wtg_CutString
+' @Param    String    strMessage
+' @Param    Integer   intLenght
+' @Return   String
 '-------------------------------------------------------------------------------
 Public Function wtg_CutString( _
                     strText As String, _
@@ -32,7 +32,7 @@ End Function
 ' Purpose : Quita los acentos, cedillas, dieresís de una cadena de texto.
 '
 ' @Param    string     strText
-' @return   string     strText
+' @Return   string     strText
 '-------------------------------------------------------------------------------
 Public Function wtg_StripAccent(strText As String) as string
 
@@ -66,8 +66,8 @@ End Function
 ' Purpose : Inserta la cantidad de espacios equivalentes al número de
 '           tabulaciones definido por la varible intTabs.
 '
-' @Param    integer   intTabs
-' @return   string    strBlankMessage
+' @Param    Integer   intTabs
+' @Return   String    strBlankMessage
 '-------------------------------------------------------------------------------
 Public Function wtg_Tabs(intTabs as integer) As String
 
