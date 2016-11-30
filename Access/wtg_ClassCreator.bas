@@ -12,7 +12,8 @@ Option Explicit
 '
 ' @Param    string     strText
 '-------------------------------------------------------------------------------
-Public Function wtg_ClassCreator(strTable As String)
+Public Function wtg_ClassCreator( _
+                    strTable As String)
 
 Dim dbs As DAO.Database
 Dim rst As DAO.Recordset
@@ -201,7 +202,9 @@ End Function
 ' @Param    integer   intTableFieldType
 ' @Return   string    strFieldType
 '-------------------------------------------------------------------------------
-Private Function wtg_GetFieldType(intTableFieldType As Integer) As String
+Private Function wtg_GetFieldType( _
+                    intTableFieldType As Integer _
+                    ) As String
 
 Dim strFieldType As String
 
@@ -268,7 +271,9 @@ End Function
 ' @Param    integer    intTableFieldType
 ' @Return   string     strLCN
 '-------------------------------------------------------------------------------
-Private Function wtg_GetPrefixType(intTableFieldType As Integer) As String
+Private Function wtg_GetPrefixType( _
+                    intTableFieldType As Integer _
+                    ) As String
 
 Dim strLCN As String
 
@@ -335,7 +340,9 @@ End Function
 ' @Param    string   strClsName
 ' @Param    string   strClsBody
 '-------------------------------------------------------------------------------
-Public Function wtg_CreateCLS(strClsName As String, strClsBody As String)
+Public Function wtg_CreateCLS( _
+                    strClsName As String, _
+                    strClsBody As String)
 
 Dim basClsModule As Module
 

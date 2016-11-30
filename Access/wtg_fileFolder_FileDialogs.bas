@@ -1,4 +1,4 @@
-Attribute VB_Name = "wtg_Filesystem"
+Attribute VB_Name = "wtg_fileFolder_FileDialogs"
 Option Compare Database
 Option Explicit
 '-------------------------------------------------------------------------------

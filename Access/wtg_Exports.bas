@@ -51,7 +51,7 @@ End Function
 ' TODO Terminar este modulo, debería permitir elegir que directorio y nombre de fichero queremos utilizar...
 Public Function wtg_ExportReportPDF( _
                     strReportName As String, _
-                    strCriteria As String
+                    strCriteria As String _
                     )
 
 Dim strDate As String
@@ -63,12 +63,12 @@ Dim strOutputFile As String
     strOutputFile = CurrentProject.Path & "\Reports\" & strDate & "_Report" & ".pdf"
 
     ' Abrimos el informe
-    DoCmd.OpenReport strReprotName, acViewPreview, , strCriteria
+    DoCmd.OpenReport strReportName, acViewPreview, , strCriteria
 
     ' Establecemos el formato de salida como PDF
     DoCmd.OutputTo acOutputReport, strReportName, acFormatPDF, strOutputFile, False
 
     ' Cerramos el Informe
-    DoCmd.Close acReport, strReprotName, acSaveNo
+    DoCmd.Close acReport, strReportName, acSaveNo
 
 End Function
