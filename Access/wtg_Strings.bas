@@ -1,4 +1,4 @@
-Attribute VB_Name = "wtg_Strings"
+Attribute VB_Name = "bas_Strings"
 Option Compare Database
 Option Explicit
 

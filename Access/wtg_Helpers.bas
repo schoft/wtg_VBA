@@ -1,4 +1,4 @@
-Attribute VB_Name = "wtg_Helpers"
+Attribute VB_Name = "bas_Helpers"
 Option Compare Database
 Option Explicit
 

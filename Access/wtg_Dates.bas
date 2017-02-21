@@ -1,4 +1,4 @@
-Attribute VB_Name = "wtg_Dates"
+Attribute VB_Name = "bas_Dates"
 Option Compare Database
 Option Explicit
 

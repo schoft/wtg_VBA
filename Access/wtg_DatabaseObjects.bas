@@ -1,4 +1,4 @@
-Attribute VB_Name = "wtg_DatabaseObjects"
+Attribute VB_Name = "bas_DatabaseObjects"
 Option Compare Database
 Option Explicit
 

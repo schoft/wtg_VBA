@@ -1,4 +1,4 @@
-Attribute VB_Name = "wtg_fileFolder_Checks"
+Attribute VB_Name = "bas_fileFolder_Checks"
 Option Compare Database
 Option Explicit
 

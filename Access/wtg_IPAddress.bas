@@ -1,4 +1,4 @@
-Attribute VB_Name = "wtg_IPAddress"
+Attribute VB_Name = "bas_IPAddress"
 Option Compare Database
 Option Explicit
 

@@ -1,4 +1,4 @@
-Attribute VB_Name = "wtg_Exports"
+Attribute VB_Name = "bas_Exports"
 Option Compare Database
 Option Explicit
 

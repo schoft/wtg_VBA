@@ -1,4 +1,4 @@
-Attribute VB_Name = "wtg_SessionLog"
+Attribute VB_Name = "bas_SessionLog"
 Option Compare Database
 Option Explicit
 

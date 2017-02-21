@@ -1,4 +1,4 @@
-Attribute VB_Name = "wtg_ClassCreator"
+Attribute VB_Name = "bas_ClassCreator"
 Option Compare Database
 Option Explicit
 
