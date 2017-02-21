@@ -14,18 +14,20 @@ Enum eComplexity
     SignsOnly
 End Enum
 
-'-------------------------------------------------------------------------------
+
+'------------------------------------------------------------------------------
 ' Method  : wtg_CutString
-' Author  : Witigo
 ' Date    : 01/06/2016
-' Version : 1.0
+' Version : 1.0.0
+' Author  : Witigo
+'
 ' Purpose: Corta una cadena de texto a una determinada longitud
 '
 ' @Param    String     strMessage
 ' @Param    Integer    intLenght
 '
 ' @Return    String
-'-------------------------------------------------------------------------------
+'------------------------------------------------------------------------------
 Public Function wtg_CutString( _
                     strText As String, _
                     intLenght As Integer _
@@ -38,9 +40,9 @@ End Function
 
 '------------------------------------------------------------------------------
 ' Method  : wtg_RandomText
-' Author  : witigo
 ' Date    : 21/02/2017
-' Version : 1.0
+' Version : 1.0.0
+' Author  : witigo
 '
 ' Purpose : Genera una cadena de texto aleatorio con una longitud y complejidad
 '           determinada en los parámetros de la función...
@@ -123,18 +125,18 @@ Dim strRandomtext As String
 End Function
 
 
-
-'-------------------------------------------------------------------------------
+'------------------------------------------------------------------------------
 ' Method  : wtg_StripAccent
-' Author  : Witigo
 ' Date    : 01/06/2016
-' Version : 1.0
+' Version : 1.0.0
+' Author  : Witigo
+'
 ' Purpose : Quita los acentos, cedillas, dieresís de una cadena de texto.
 '
 ' @Param    string     strText
 '
-' @Return   string     strText
-'-------------------------------------------------------------------------------
+' @Return    string     strText
+'------------------------------------------------------------------------------
 Public Function wtg_StripAccent( _
                     strText As String _
                     ) as string
@@ -162,18 +164,20 @@ Const RegChars = "aaaaeeeeiiiioooouuuuAAAAEEEEIIIIOOOOUUUU"
 
 End Function
 
-'-------------------------------------------------------------------------------
+
+'------------------------------------------------------------------------------
 ' Method  : wtg_Tabs
-' Author  : Witigo
 ' Date    : 01/06/2016
-' Version : 1.0
+' Version : 1.0.0
+' Author  : Witigo
+'
 ' Purpose : Inserta la cantidad de espacios equivalentes al número de
 '           tabulaciones definido por la varible intTabs.
 '
 ' @Param    Integer   intTabs
 '
 ' @Return   String    strBlankMessage
-'-------------------------------------------------------------------------------
+'------------------------------------------------------------------------------
 Public Function wtg_Tabs( _
                     intTabs as integer _
                     ) As String

@@ -8,6 +8,7 @@ Option Explicit
 ' Author  : witigo
 ' Date    : 03/11/2016
 ' Version : 1.0.1
+'
 ' Purpose : Pregunta para eliminar un registro
 '
 ' @Param    String    strMessage    Optional
@@ -42,6 +43,7 @@ End Function
 ' Author  : witigo
 ' Date    : 03/11/2016
 ' Version : 1.0.1
+'
 ' Purpose : Pregunta para guardar los cambios a un registro
 '
 ' @Param    String    strMessage    Optional

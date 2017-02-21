@@ -12,7 +12,8 @@ Const cstrSessionTableName As String = "dbo_SessionLog"
 ' Method    : wtg_WriteSesionLog
 ' Author    : Witigo (Angel Campos Muñoz)
 ' Date      : 22/09/2014
-' Version   : 1.0
+' Version   : 1.0.0
+'
 ' Purpose   : Inserta un registro en la tabla de log de sesiones con los
 '             datos de la sesión de usuario
 '
@@ -64,7 +65,8 @@ End Function
 ' Method    : wtg_CreateSessionLog_Table
 ' Author    : Witigo
 ' Date      : 09/06/2013
-' Version   : 1.0
+' Version   : 1.0.0
+'
 ' Purpose   : Crea en la base de datos una tabla para almacenar los registros
 '             de log de las sesiones de usuario en la aplicación...
 '-------------------------------------------------------------------------------

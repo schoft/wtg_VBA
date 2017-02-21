@@ -8,6 +8,7 @@ Option Explicit
 ' Author  : witigo
 ' Date    : 03/11/2016
 ' Version : 1.0
+'
 ' Purpose : Comprueba si el cliente tiene registros asociados en la tabla
 '           dbo_clientes_equipos
 '
@@ -60,6 +61,7 @@ End Function
 ' Author  : witigo
 ' Date    : 03/11/2016
 ' Version : 1.0
+'
 ' Purpose : Elimina el registro objetivo de la tabla seleccionada...
 '
 ' @Param    String    strTableName
