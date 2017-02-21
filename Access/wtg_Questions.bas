@@ -5,9 +5,9 @@ Option Explicit
 
 '--------------------------------------------------------------------------------
 ' Method  : wtg_Eliminar
-' Author  : witigo
 ' Date    : 03/11/2016
 ' Version : 1.0.1
+' Author  : witigo
 '
 ' Purpose : Pregunta para eliminar un registro
 '
@@ -40,9 +40,9 @@ End Function
 
 '--------------------------------------------------------------------------------
 ' Method  : wtg_Guardar
-' Author  : witigo
 ' Date    : 03/11/2016
 ' Version : 1.0.1
+' Author  : witigo
 '
 ' Purpose : Pregunta para guardar los cambios a un registro
 '
