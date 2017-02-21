@@ -5,13 +5,15 @@ Option Explicit
 
 '-------------------------------------------------------------------------------
 ' Method  : wtg_IsSunday
-' Author  : Witigo
 ' Date    : 01/06/2016
 ' Version : 1.0
+' Author  : Witigo
+'
 ' Purpose : Comprueba si la fecha pasada como argumento corresponde a Domingo.
 '           Devuelve VERDADERO si es Domingo
 '
 ' @Param    Date     dtDate
+'
 ' @Return   Boolean  wtg_IsSunday
 '-------------------------------------------------------------------------------
 Public Function wtg_IsSunday( _

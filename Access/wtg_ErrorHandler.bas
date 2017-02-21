@@ -1,9 +1,9 @@
 Attribute VB_Name = "bas_ErrorHandler"
 '---------------------------------------------------------------------------------------
 ' File     : bas_ErrorLogHandler
+' Date     : 16/02/2017
 ' Version  : 1.0.1
 ' Author   : Witigo
-' Date     : 16/02/2017
 '
 ' Purpose  : Código VBA necesario para manejar los errores de la aplicación y grabar la
 '            información del error en una tabla de la base de datos, en un fichero de
@@ -14,6 +14,7 @@ Attribute VB_Name = "bas_ErrorHandler"
 '---------------------------------------------------------------------------------------
 Option Compare Database
 Option Explicit
+
 
 ' Enumeración para controlar donde se almacenará el log de error
 Public Enum eLogDestination
@@ -26,9 +27,9 @@ End Enum
 
 '-------------------------------------------------------------------------------
 ' Procedure : wtg_CreateErrorLog_Table
-' Author    : Witigo
 ' Date      : 09/06/2013
 ' Version   : 1.0.1
+' Author    : Witigo
 '
 ' Purpose   : Crea una tabla en la base de datos para almacenar los logs de
 '             error de la aplicación.
@@ -88,10 +89,10 @@ End Function
 
 '------------------------------------------------------------------------------
 ' Method  : wtg_ErrorLog
-' Version : 1.0.1
-' Company : Proteksa Networks S.L.
-' Author  : Witigo
 ' Date    : 16/02/2017
+' Version : 1.0.1
+' Author  : Witigo
+' Company : Proteksa Networks S.L.
 '
 ' Purpose : Escribe un registro de LOG de error en la aplicación
 '
@@ -119,10 +120,10 @@ End Function
 
 '-------------------------------------------------------------------------------
 ' Method  : wtg_ErrorHandler
-' Version : 1.0.1
-' Company : Proteksa Networks S.L.
-' Author  : Witigo
 ' Date    : 16/02/2017
+' Version : 1.0.1
+' Author  : Witigo
+' Company : Proteksa Networks S.L.
 '
 ' Purpose : Captura el evento de error y lo redirige a su destino
 '
@@ -182,9 +183,9 @@ End Sub
 
 '-------------------------------------------------------------------------------
 ' Method    : wtg_ShowErrorLog
+' Date      : 09/06/2013
 ' Version   : 1.0.1
 ' Author    : Witigo
-' Date      : 09/06/2013
 '
 ' Purpose   : Captura los mensajes de error de Ms Access y los muestra ya
 '             formateados en una ventana de información/error
@@ -251,9 +252,9 @@ End Function
 
 '-------------------------------------------------------------------------------
 ' Procedure : wtg_WriteErrorLogFile
+' Date      : 09/06/2013
 ' Version   : 1.0.1
 ' Author    : Witigo
-' Date      : 09/06/2013
 '
 ' Purpose   : Escribe en un fichero de log los errores de la aplicación.
 '
@@ -304,9 +305,9 @@ End Function
 
 '-------------------------------------------------------------------------------
 ' Procedure : wtg_WriteErrorLogTable
+' Date      : 09/06/2013
 ' Version   : 1.0.1
 ' Author    : Witigo
-' Date      : 09/06/2013
 '
 ' Purpose   : Escribe un registro de log en una tabla de la aplicación.
 '

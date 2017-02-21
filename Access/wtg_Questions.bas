@@ -11,7 +11,8 @@ Option Explicit
 ' Purpose : Pregunta para eliminar un registro
 '
 ' @Param    String    strMessage    Optional
-' @Return	Boolean
+'
+' @Return	 Boolean
 '--------------------------------------------------------------------------------
 Public Function wtg_Eliminar( _
                     Optional strMessage as string = "¿Desea eliminar el registro?" _
@@ -44,7 +45,8 @@ End Function
 ' Purpose : Pregunta para guardar los cambios a un registro
 '
 ' @Param    String    strMessage    Optional
-' @Return   Boolean
+'
+' @Return    Boolean
 '--------------------------------------------------------------------------------
 Public Function wtg_Guardar( _
                     Optional strMessage as string = "¿Desea eliminar el registro?" _

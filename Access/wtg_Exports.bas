@@ -5,14 +5,16 @@ Option Explicit
 
 '-------------------------------------------------------------------------------
 ' Method  : wtg_ExportTableToDatabase
-' Author  : Witigo
 ' Date    : 01/06/2016
 ' Version : 1.0
+' Author  : Witigo
+'
 ' Purpose : Exporta la tabla indicada a otra base de datos.
 '
 ' @Param    String    strTableName
 ' @Param    String    strDestinationDatabase
-' @Return   Boolean
+'
+' @Return    Boolean
 '-------------------------------------------------------------------------------
 Public Function wtg_ExportTableToDatabase( _
                     strTableName As String, _
@@ -40,9 +42,10 @@ End Function
 
 '-------------------------------------------------------------------------------
 ' Method  : wtg_ExportReportPDF
-' Author  : Witigo
 ' Date    : 01/06/2016
 ' Version : 1.0
+' Author  : Witigo
+'
 ' Purpose : Exporta el informe a formato PDF
 '
 ' @Param    string     strReportName

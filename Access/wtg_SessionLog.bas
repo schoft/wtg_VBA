@@ -85,15 +85,18 @@ Dim fld As Field
         tbl.Fields.Append fld
 
         Set fld = tbl.CreateField("Terminal", dbText, 50)
+        fld.AllowZeroLength = True
         tbl.Fields.Append fld
 
         Set fld = tbl.CreateField("User_ID", dbInteger)
         tbl.Fields.Append fld
 
         Set fld = tbl.CreateField("Result", dbText, 100)
+        fld.AllowZeroLength = True
         tbl.Fields.Append fld
 
         Set fld = tbl.CreateField("ErrPassword", dbText, 50)
+        fld.AllowZeroLength = True
         tbl.Fields.Append fld
 
         dbs.TableDefs.Append tbl

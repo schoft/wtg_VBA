@@ -22,10 +22,12 @@ Option Explicit
 ' Author  : Witigo
 ' Date    : 08/08/2016
 ' Version : 1.0
+'
 ' Purpose : Realiza la validación de una IP
 '
 ' @Param    Variant    varIPAddress
-' @Return   Boolean
+'
+' @Return    Boolean
 '-------------------------------------------------------------------------------
 Public Function wtg_ValidateIP( _
                     varIPAddress As Variant _
@@ -79,11 +81,13 @@ End Function
 ' Author  : Witigo
 ' Date    : 08/08/2016
 ' Version : 1.0
+'
 ' Purpose : Realiza la conversión de una dirección IP válida a un número de tipo
 '           Long para poder almacenarlo en la base de datos.
 '
 ' @Param    variant    varIPAddress
-' @Return   variant    wtg_IP2Long
+'
+' @Return    variant    wtg_IP2Long
 '-------------------------------------------------------------------------------
 Public Function wtg_IP2Long( _
                     varIPAddress As Variant _
@@ -129,10 +133,12 @@ End Function
 ' Author  : Witigo
 ' Date    : 08/08/2016
 ' Version : 1.0
+'
 ' Purpose : Realiza la conversión de un número de tipo Long a una dirección IP.
 '
 ' @Param    variant    varLong
-' @Return   variant    wtg_Long2IP
+'
+' @Return    variant    wtg_Long2IP
 '-------------------------------------------------------------------------------
 Public Function wtg_Long2IP( _
                     varLong As Variant _
@@ -176,6 +182,7 @@ Dim intPrevPos As Integer
     End If
 
 End Function
+
 
 '-------------------------------------------------------------------------------
 ' Method  : wtg_Zeros4IP

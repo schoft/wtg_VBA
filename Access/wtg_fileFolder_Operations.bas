@@ -94,10 +94,12 @@ Private const cstrDoubleNullCharacter as string = vbNullChar & vbNullChar
 ' Author  : witigo
 ' Date    : 29/11/2016
 ' Version : 1.0
+'
 ' Purpose : Copia un fichero o directorio a una ruta determinada...
 '
 ' @Param    String    strSourcePath
 ' @Param    String    strTargetPath
+'
 ' @Return   Boolean
 '--------------------------------------------------------------------------------
 Public Function wtg_WinAPI_Copy( _
@@ -132,14 +134,17 @@ Dim lngResult As Long
     
 End Function
 
+
 '--------------------------------------------------------------------------------
 ' Method  : wtg_WinAPI_Delete
 ' Author  : witigo
 ' Date    : 30/11/2016
 ' Version : 1.0
+'
 ' Purpose : Borra el directorio especificado.
 '
 ' @Param    String    strTargetPath
+'
 ' @Return   Boolean
 '--------------------------------------------------------------------------------
 Public Function wtg_WinAPI_Delete( _

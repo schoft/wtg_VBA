@@ -3,8 +3,7 @@ Option Compare Database
 Option Explicit
 
 
-' Enumeraciones para su uso en la
-' función wtg_OrdinalNumbers.
+' Enumeraciones para su uso en la función wtg_OrdinalNumbers.
 Public Enum GenderType
     Masculino
     Femenino
@@ -16,10 +15,12 @@ End Enum
 ' Author  : Witigo
 ' Date    : 01/06/2016
 ' Version : 1.0.1
+'
 ' Purpose : Genera un número aleatorio comprendido entre dos números dados.
 '
 ' @Param    Integer    intMinNumber
 ' @Param    Integer    intMaxNumber
+'
 ' @Return   Integer
 '-------------------------------------------------------------------------------
 Public Function wtg_RandomNumber( _
@@ -43,7 +44,8 @@ End Function
 ' Method  : wtg_OrdinalNumber
 ' Author  : Witigo (Angel Campos Muñoz)
 ' Date    : 07/10/2015
-' Version :
+' Version : 1.0.0
+'
 ' Purpose : Devuelve como número ordinal el número cardinal pasado como argu-
 '           mento, la función devuelve el número ordinal en género masculino
 '           o femeníno dependiendo del valor seleccionado en la enumeración
@@ -53,10 +55,11 @@ End Function
 '           meros primero y tercero, debemos seleccionar TRUE en el valor
 '           boleano bolApocope...
 '
-' @Param    Integer   intNumber
-' @Param    Enum      eGender
-' @Param    Boolean   bolApocope
-' @Return   String
+' @Param    Integer    intNumber
+' @Param    Enum       eGender
+' @Param    Boolean    bolApocope
+'
+' @Return    String
 '-------------------------------------------------------------------------------
 Public Function wtg_OrdinalNumber( _
                     intNumber As Integer, _
@@ -158,11 +161,14 @@ End Function
 ' Author  : Juan M. Afán de Ribera <accessvba@ya.com>
 ' Date    : Desconocida
 ' Version : 1.0
+'
 ' Purpose : Anula las pulsaciones de las teclas que no sean números. Para ello
 '           evalua el valor de la tecla pulsada y en caso de no ser un número
 '           [0-9] anula su pulsación.
+'
 ' When    : En el evento KeyPress de un cuadro de texto, añadir la llamada al
 '           procedimiento.
+'
 ' Example : Call wtg_OnlyNumbers(KeyAscii)
 '
 ' @Param    Integer    KeyAscii
@@ -182,6 +188,7 @@ Sub wtg_OnlyNumbers( _
 
             ' si es un retroceso, enter o tabulación
             Case vbKeyBack, vbKeyReturn, vbKeyTab
+
             ' no se hace nada
             Case Else
                 ' Anulamos el caracter introducido

@@ -3,16 +3,18 @@ Option Compare Database
 Option Explicit
 
 
-'-------------------------------------------------------------------------------
+'------------------------------------------------------------------------------
 ' Method  : wtg_CheckIfTableExists
-' Author  : Witigo
 ' Date    : 01/06/2016
 ' Version : 1.0
+' Author  : Witigo
+'
 ' Purpose : Comprueba si existe una tabla en la base de datos
 '
 ' @Param    Date     strTableName
-' @Return   Boolean
-'-------------------------------------------------------------------------------
+'
+' @Return    Boolean
+'------------------------------------------------------------------------------
 Public Function wtg_CheckIfTableExists( _
                     strTableName As String _
                     ) As Boolean
@@ -56,16 +58,18 @@ Dim strSQL As String
 End Function
 
 
-'-------------------------------------------------------------------------------
+'------------------------------------------------------------------------------
 ' Method  : wtg_IsFormLoaded
-' Author  : Witigo
 ' Date    : 01/06/2016
 ' Version : 1.0
+' Author  : Witigo
+'
 ' Purpose : Comprueba si un formulario está cargado.
 '
 ' @Param    String     strFormName
+'
 ' @Return   Boolean
-'-------------------------------------------------------------------------------
+'------------------------------------------------------------------------------
 Public Function wtg_IsFormLoaded( _
                     ByVal strFormName As String _
                     ) As Boolean
@@ -84,16 +88,17 @@ Dim objForm As Object
 End Function
 
 
-'-------------------------------------------------------------------------------
+'------------------------------------------------------------------------------
 ' Procedure : wtg_IsRuntime
-' Author    : Witigo
 ' Date      : 01/02/2014
 ' Version   : 1.0.1
+' Author    : Witigo
+'
 ' Purpose   : Comprueba el modo de funcionamiento de la aplicación y devuelve
 '             VERDADERO si la aplicación se está ejecutando en modo RunTime...
 '
 ' @Return   Boolean
-'-------------------------------------------------------------------------------
+'------------------------------------------------------------------------------
 Public Function wtg_IsRuntime() As Boolean
 
     wtg_IsRuntime = Application.SysCmd(acSysCmdRuntime)
@@ -101,16 +106,17 @@ Public Function wtg_IsRuntime() As Boolean
 End Function
 
 
-'-------------------------------------------------------------------------------
+'------------------------------------------------------------------------------
 ' Procedure : wtg_StatusBar
-' Author    : Witigo (Angel Campos Muñoz)
 ' Date      : 26/11/2014
 ' Version   : 1.0
+' Author    : Witigo (Angel Campos Muñoz)
+'
 ' Purpose   : Muestra un mensaje en la barra de estado, o si no se ha definido
 '             ningun mensaje, limpia de mensajes la barra de estado.
 '
 ' @Param    String   strMessage
-'-------------------------------------------------------------------------------
+'------------------------------------------------------------------------------
 Public Function wtg_StatusBar( _
                     Optional strMessage As String = vbNullString _
                     )
@@ -134,18 +140,19 @@ Dim Temp As Variant
 End Function
 
 
-'-------------------------------------------------------------------------------
+'------------------------------------------------------------------------------
 ' Procedure : wtg_OpenEditForm
-' Author    : Witigo
 ' Date      : 26/11/2014
 ' Version   : 1.0
+' Author    : Witigo
+'
 ' Purpose   : Abre el formulario en modo EDICION.
 '             Opcionalmente se puede añadir una clausula where.
 '
 ' @Param    String    strFormName
 ' @Param    String    strWhere
 ' @Param    String    strOpenArgs
-'-------------------------------------------------------------------------------
+'------------------------------------------------------------------------------
 Public Sub wtg_OpenEditForm( _
                 strFormName As String, _
                 Optional strWhere as string = "" _
@@ -158,18 +165,19 @@ Public Sub wtg_OpenEditForm( _
 End Sub
 
 
-'-------------------------------------------------------------------------------
+'------------------------------------------------------------------------------
 ' Procedure : wtg_OpenReadOnlyForm
-' Author    : Witigo
 ' Date      : 26/11/2014
 ' Version   : 1.0.1
+' Author    : Witigo
+'
 ' Purpose   : Abre el formulario en modo SOLO LECTURA.
 '             Opcionalmente se puede añadir una clausula where.
 '
 ' @Param    String    strFormName
 ' @Param    String    strWhere
 ' @Param    String    strOpenArgs
-'-------------------------------------------------------------------------------
+'------------------------------------------------------------------------------
 Public Sub wtg_OpenReadOnlyForm( _
                 strFormName As String, _
                 Optional strWhere as string = "" _
@@ -182,15 +190,16 @@ Public Sub wtg_OpenReadOnlyForm( _
 End Sub
 
 
-'-------------------------------------------------------------------------------
+'------------------------------------------------------------------------------
 ' Procedure : wtg_CloseForm
-' Author    : Witigo
 ' Date      : 26/11/2014
 ' Version   : 1.0
+' Author    : Witigo
+'
 ' Purpose   : Cierra el formulario
 '
 ' @Param    String   strFormName
-'-------------------------------------------------------------------------------
+'------------------------------------------------------------------------------
 Public Sub wtg_CloseForm( _
                 strFormName As String _
                 )

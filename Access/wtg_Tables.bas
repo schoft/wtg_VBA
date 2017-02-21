@@ -4,7 +4,7 @@ Option Explicit
 
 
 '--------------------------------------------------------------------------------
-' Method  : CheckRegistros
+' Method  : wtg_CheckRegistro
 ' Author  : witigo
 ' Date    : 03/11/2016
 ' Version : 1.0
@@ -13,7 +13,8 @@ Option Explicit
 '
 ' @Param    String    strTableName
 ' @Param    String    strFieldName
-' @Param    Long      lngRegistry    Optional
+' @Param    Long      lngRegistry     Optional
+'
 ' @Return   Boolean
 '--------------------------------------------------------------------------------
 Public Function wtg_CheckRegistro( _
@@ -55,7 +56,7 @@ End Function
 
 
 '--------------------------------------------------------------------------------
-' Method  : EliminaRegistro
+' Method  : wtg_EliminaRegistro
 ' Author  : witigo
 ' Date    : 03/11/2016
 ' Version : 1.0
